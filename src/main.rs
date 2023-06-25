@@ -19,7 +19,7 @@ fn model(app: &App) -> Model {
     let window_id = app.new_window().view(view).raw_event(raw_window_event).build().unwrap();
     let window = app.window(window_id).unwrap();
     let egui = Egui::from_window(&window);
-    let rum = 0.0;
+    let num = 0.0;
     Model {
         egui,
         num,
@@ -37,7 +37,7 @@ fn update(app: &App, model: &mut Model, update: Update) {
         ui.add(egui::Slider::new(&mut model.num, 1.0..=40.0));
     });
 
-    println!("{}", model.rum);
+    println!("{}", model.num);
 
 }
 
