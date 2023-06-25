@@ -7,7 +7,7 @@ mod agent;
 struct Model {
     // window: Window,
     egui: Egui,
-    rum: f32,
+    num: f32,
 }
 
 fn main() {
