@@ -1,9 +1,6 @@
 use nannou::prelude::*;
 use nannou_egui::{self, egui, Egui};
 
-mod agent;
-
-
 struct Model {
     // window: Window,
     egui: Egui,
