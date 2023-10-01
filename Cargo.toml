@@ -1,5 +1,5 @@
 [package]
-name = "second-try"
+name = "nannou-default"
 version = "0.1.0"
 edition = "2021"
 
