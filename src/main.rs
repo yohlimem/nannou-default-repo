@@ -24,18 +24,18 @@ fn model(app: &App) -> Model {
 }
 
 fn update(app: &App, model: &mut Model, update: Update) {
-    let egui = &mut model.egui;
-    egui.set_elapsed_time(update.since_start);
+    render_egui(&mut model.egui);
+}
+fn render_egui(egui: &mut Egui){
+    let egui = egui;
+    // egui.set_elapsed_time(update.since_start);
 
     let ctx = egui.begin_frame();
 
     egui::Window::new("Rum window").show(&ctx, |ui| {
-        ui.label("res");
-        ui.add(egui::Slider::new(&mut model.num, 1.0..=40.0));
+        // ui.label("res"); // template
+        // ui.add(egui::Slider::new(&mut model.num, 1.0..=40.0));
     });
-
-    println!("{}", model.num);
-
 }
 
 fn raw_window_event(_app: &App, model: &mut Model, event: &nannou::winit::event::WindowEvent){
